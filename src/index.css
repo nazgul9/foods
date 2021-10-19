@@ -1,0 +1,35 @@
+.gl {
+    display: inline-block;
+    width: 450px;
+    height: 450px;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.div1 {
+    display: block;
+    width: 330px;
+    height: 330px;
+    margin: 20px;
+}
+
+/* input {
+    margin: 20px;
+    margin-bottom: -20px;
+    width: 350px;
+    height: 25px;
+    border-radius: 5px;
+} */
+
+/* img {
+    width: 350px;
+    height: 350px;
+} */
+.Card,img:hover{
+    transition: 0.5s;
+    transform: scale(0.8);
+  }
+  .read_more{
+background-color:blue;
+  }
