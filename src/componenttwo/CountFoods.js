@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { Card, Button, Spinner, Navbar } from 'react-bootstrap'
-import HNavbar from '../componenttwo/HNavbar'
 import {Link} from "react-router-dom"
 
 export default class CountFoods extends Component {
@@ -54,10 +53,9 @@ export default class CountFoods extends Component {
 
         return (
             <>
-                {/* <HNavbar /> */}
                 {   this.state.lan ? 
-          <div className="text-center" style={{marginTop:"250px"}}>
-                   <Spinner animation="border" size="sm"/>
+          <div className="text-center" style={{marginTop:"400px"}}>
+                   <Spinner animation="border" size="lg"/>
                    </div>:
                 <div className='d-flex justify-content-around flex-wrap '>
                     {this.state.meals.map((h) => {

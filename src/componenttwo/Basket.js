@@ -150,18 +150,18 @@ export default class Basket extends Component {
         <div>
         <ToastContainer />
 
-          {/* {!(this.state.item.length > 0) && <div className="next" align='center'><Button as={Link} to={'/'}><h1>Назад</h1></Button><div className='image'><Image src="http://risovach.ru/upload/2014/03/mem/gost_46606310_orig_.jpg" fluid /></div></div>} */}
+          {!(this.state.item.length > 0) && <div align='center'style={{width:550,height:550,backgroundColor:"white",overflow:0.3,marginLeft:450,marginTop:"40px"}} ><h1 style={{fontSize:'3rem',marginTop:'25px'}}>там пусто</h1></div>}
         </div>
         <Container>
           <Row>
             {this.state.item.map((h) => {
               return (
-                <Card className="p-3" style={{
-                  width: '18rem', margin: '20px'
+                <Card as={Link} to={`/about/${h.idMeal}`} className="p-3" style={{
+                  width: '18rem', margin: '20px',textDecoration:"none"
                 }}>
                   <Card.Img className="mt-4" variant="top" src={h.strMealThumb} />
                   <Card.Body>
-                    <Card.Title as={Link} to={`/about/${h.idMeal}`}>{h.strMeal}</Card.Title> </Card.Body>
+                    <Card.Title>{h.strMeal}</Card.Title> </Card.Body>
                   <Button type={'button'} className={this.state.item.find(v => v.idMeal === h.idMeal) ? 'btn btn-danger' : 'btn btn-success'} onClick={() => this.todoAdd(h)}>{this.state.item.find(v => v.idMeal === h.idMeal) ? 'Удалить' : ' Добавить '}</Button>
                 </Card>
               )
