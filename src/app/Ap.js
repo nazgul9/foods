@@ -9,18 +9,25 @@ import CountFoods from '../componenttwo/CountFoods';
 import Search from '../componenttwo/Search';
 import { FormControl, NavDropdown, Nav, Button, Navbar, Container, Form } from "react-bootstrap"
 import Footer from '../componenttwo/Footer';
+import axios from 'axios';
 
 export default class Ap extends Component {
   state = {
-
-    categor: ""
-
+    categor: []
   }
+  componentDidMount(){
+    const t = axios.get(`https://www.themealdb.com/api/json/v1/1/list.php?a=list`);
+        t.then((o) => {
+          console.log(o.data)
+          this.setState({ categor: o.data.meals })
+        })
+  }
+  
   render() {
     const r = this.state.categor || []
     return (
       <>
-        <Navbar className="navbar navbar-secondary bg-secondary mb-5" expand="lg">
+        <Navbar className="navbar navbar-secondary bg-secondary mb-5 navbar navbar-inverse navbar-fixed-top" expand="lg">
           <Container>
             <Link to="/" style={{ textDecoration: "none" }}><h3>Osh Food</h3></Link>
             <Navbar.Toggle aria-controls="navbarScroll" />
@@ -33,11 +40,6 @@ export default class Ap extends Component {
                   <Nav.Link as={Link} to="/" className="header__link">Home
                   </Nav.Link>
                 </div>
-                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                  ({this.state.categor.length})
-                  <span class="visually-hidden"></span>
-                </span>
-                
                 <NavDropdown title="Countries" id="navbarScrollingDropdown">
                   {r.map((g) =>
                     // <NavDropdown.Item as={Link} to={`/countfoods/${g.strArea}`} href="#action3" value={g.strArea}>{g.strArea}</NavDropdown.Item>)}

@@ -40,7 +40,7 @@
      text-decoration: none;
  }
  
- .parallax,body{
+body{
     background-image: url("https://composeclick.com/wp-content/uploads/2020/01/Food-Photography-Hashtags.jpg");
     position: relative;
     /* background-attachment: fixed;    */

@@ -1,34 +1,37 @@
 import React from 'react';
+// import './css/Footer.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
-        <footer className="alert-primary mt-5">
-            <div className="d-flex">             
-               <h4 className=" h1  ms-5">Newsletter</h4>
-
-                {/* <div className="col-6 d-block">
-                    <textarea className="mt-2 foot-mess col-md-6" rows="2">Message</textarea>
-                </div> */}
-                <div className="bg-circle-outline d-block mt-3 ms-5">
-                    <a href="https://twitter.com/" className="text-white d-block">
-                        <i className="fa fa-2x fa-fw fa-twitter  d-block"style={{color:"blue"}}></i></a>
-                </div>
-                <div className=" bg-circle-outline d-block mt-3 ms-5">
-                    <a href="https://instagram.com/" className="text-white d-block">
-                        <i className="fa fa-2x fa-fw fa-instagram d-block ml-5 "style={{color:"pink"}}></i></a>
-                </div>
-                <div className="bg-circle-outline d-block mt-3 ms-5">
-                    <a href="https://www.whatsapp.com/company/" className="text-white d-block">
-                        <i className="fa fa-2x fa-fw fa-whatsapp d-block"style={{color:"green"}}></i></a>
-                </div>
-
-            </div>
-
-
-            <div class="mt-3 text-center">©@osh__foods
-            </div>
-
-        </footer>
+        <div className="footer">
+            <div className="bg-dark d-flex justify-content-around mt-5 black-div">
+				<div className="Corporate pt-5">
+					<h2 className="h4" style={{color: "grey"}}>Corporate</h2>
+					<Link to="/" style={{fontSize: "13px"}} className="unline-none">About the company</Link><br />
+					<Link to="/" style={{fontSize: "13px"}}className="unline-none">Company offices</Link><br />
+					<Link to="/" style={{fontSize: "13px"}}className="unline-none">Partners</Link><br />
+					<Link to="/" style={{fontSize: "13px"}}className="unline-none">Tearms of use</Link><br />
+					<Link to="/" style={{fontSize: "13px"}}className="unline-none">Privacy</Link><br />
+					<Link to="/" style={{fontSize: "13px"}}className="unline-none">Contact us</Link><br />
+				</div>
+				<div className="Explore pt-5">
+					<h2 className="h4" style={{color: "grey"}}>Explore</h2>
+				 	<Link className="unline-none" to="/">Courses</Link><br />
+				 	<Link className="unline-none" to="/">Tutuors</Link><br />
+				 	<Link className="unline-none" to="/">Pricing</Link><br />
+				 	<Link className="unline-none" to="/">Become Tutor</Link><br />
+				 	<Link className="unline-none" to="/">Sing Up</Link><br />
+				</div>
+				<div className="Newsletter col-6 pt-5">
+					<h2 className="h4" style={{color: "grey"}}>Newsletter</h2>
+					<div className="pt-2">
+						<p style={{fontSize: "12px"}} className="text-secondary">©2015 Besoft__foods.kg.</p>
+					</div>
+				</div>
+			</div>
+        </div>
     );
 };
 

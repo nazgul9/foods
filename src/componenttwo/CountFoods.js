@@ -20,7 +20,7 @@ export default class CountFoods extends Component {
             console.log(s)
             this.setState({ meals: s.data.meals })
         })
-            .catch(error => console.log(error))
+            // .catch(error => console.log(error))
             .finally(() => {
                 this.setState({ lan: false })
             })
@@ -53,7 +53,7 @@ export default class CountFoods extends Component {
 
         return (
             <>
-                {   this.state.lan ? 
+                {this.state.lan ? 
           <div className="text-center" style={{marginTop:"400px"}}>
                    <Spinner animation="border" size="lg"/>
                    </div>:
@@ -64,7 +64,7 @@ export default class CountFoods extends Component {
                                 <Card className="m-5 p-4" style={{ width: '18rem' }}>
                                     <Card.Img variant="top" className="mb-2 p-3" src={h.strMealThumb} />
                                     <Button type={'button'} className={this.state.asan.find(v => v.idMeal === h.idMeal) ?'btn btn-danger'  : 'btn btn-success'} onClick={() => this.todoAdd(h)}>{this.state.asan.find(v => v.idMeal === h.idMeal) ? 'Удалить' : ' Добавить '}</Button>
-                                       <Card.Title as={Link} to={`/about/${h.idMeal}`}className="mt-2">{h.strMeal}</Card.Title>
+                                       <Card.Title as={Link} to={`/about/${h.idMeal}`}className="mt-2" style={{textDecoration:"none"}}>{h.strMeal}</Card.Title>
                                 </Card>
                             </>
                         )

@@ -61,10 +61,10 @@ export default class Item extends Component {
                     <div className='d-flex justify-content-around flex-wrap'>{console.log(this.state.item)}
                         {this.state.item.map((h) => {
                             return (
-                                <Card  as={Link} to={`/about/${h.idMeal}`} style={{ width: '18rem', marginTop: "20px",textDecoration:"none"}}>
+                                <Card style={{ width: '18rem', marginTop: "20px",textDecoration:"none"}}>
                                     <Card.Img  className="p-3"variant="top" src={h.strMealThumb} />
                                     <Card.Body>
-                                        <Card.Title  className="ml-5">{h.strMeal}</Card.Title> </Card.Body>
+                                        <Card.Title  as={Link} to={`/about/${h.idMeal}`} style={{textDecoration:"none"}} className="ml-5">{h.strMeal}</Card.Title> </Card.Body>
                                         <Button type={'button'} className={this.state.asjan.find(v => v.idMeal === h.idMeal) ?'btn btn-danger'  : 'btn btn-success'} onClick={() => this.todoAdd(h)}>{this.state.asjan.find(v => v.idMeal === h.idMeal) ? 'Удалить' : ' Добавить '}</Button>
                                    
                                 </Card>

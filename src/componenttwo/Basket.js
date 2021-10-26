@@ -156,12 +156,12 @@ export default class Basket extends Component {
           <Row>
             {this.state.item.map((h) => {
               return (
-                <Card as={Link} to={`/about/${h.idMeal}`} className="p-3" style={{
-                  width: '18rem', margin: '20px',textDecoration:"none"
+                <Card className="p-3" style={{
+                  width: '18rem', margin: '20px',
                 }}>
                   <Card.Img className="mt-4" variant="top" src={h.strMealThumb} />
                   <Card.Body>
-                    <Card.Title>{h.strMeal}</Card.Title> </Card.Body>
+                    <Card.Title  style={{textDecoration:"none"}}as={Link} to={`/about/${h.idMeal}`}>{h.strMeal}</Card.Title> </Card.Body>
                   <Button type={'button'} className={this.state.item.find(v => v.idMeal === h.idMeal) ? 'btn btn-danger' : 'btn btn-success'} onClick={() => this.todoAdd(h)}>{this.state.item.find(v => v.idMeal === h.idMeal) ? 'Удалить' : ' Добавить '}</Button>
                 </Card>
               )
