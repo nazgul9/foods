@@ -47,25 +47,25 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 1000px;
+    /* min-height: 1000px; */
     text-align: center;
     
  }
- .header{
+ /* .header{
 	position: relative;
-	display: flex;
+	display: flex; */
 	/* justify-content: center; */
-} 
+/* } 
 .header__lyst{
 	display: flex;
 	position: relative;
 	z-index: 2;
 }
 .header__item{
-	display: inline-block;
+	display: inline-block; */
 	/* margin: 250px 0px 70px 90px; */
     /* margin-left: 250px;   */
- }
+ /* }
 .header__link{
 	color:#ffffff;
 	text-transform: uppercase;
@@ -102,4 +102,4 @@ body{
 	background: #0ff507;
 	z-index: -1;
 	opacity: 0; 
-}
+} */

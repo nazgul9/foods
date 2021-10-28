@@ -39,7 +39,7 @@ class Category extends React.Component {
  
     return (
       <> 
-      {   this.state.lan ? 
+      {this.state.lan ? 
         <div className="text-center" style={{marginTop:"400px"}}>
                  <Spinner animation="border" size="lg"/>
                  </div>:

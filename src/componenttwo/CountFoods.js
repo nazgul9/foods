@@ -10,7 +10,6 @@ export default class CountFoods extends Component {
         this.state = {
             meals: [],
             lan: true,
-            asan:[],
             item: JSON.parse(localStorage.getItem('key')) || []
 
         }
@@ -63,7 +62,7 @@ export default class CountFoods extends Component {
                             <>
                                 <Card className="m-5 p-4" style={{ width: '18rem' }}>
                                     <Card.Img variant="top" className="mb-2 p-3" src={h.strMealThumb} />
-                                    <Button type={'button'} className={this.state.asan.find(v => v.idMeal === h.idMeal) ?'btn btn-danger'  : 'btn btn-success'} onClick={() => this.todoAdd(h)}>{this.state.asan.find(v => v.idMeal === h.idMeal) ? 'Удалить' : ' Добавить '}</Button>
+                                    <Button type={'button'} className={this.state.item.find(v => v.idMeal === h.idMeal) ?'btn btn-danger'  : 'btn btn-success'} onClick={() => this.todoAdd(h)}>{this.state.item.find(v => v.idMeal === h.idMeal) ? 'Удалить' : ' Добавить '}</Button>
                                        <Card.Title as={Link} to={`/about/${h.idMeal}`}className="mt-2" style={{textDecoration:"none"}}>{h.strMeal}</Card.Title>
                                 </Card>
                             </>

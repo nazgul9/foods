@@ -45,7 +45,7 @@ export default class Ap extends Component {
                     // <NavDropdown.Item as={Link} to={`/countfoods/${g.strArea}`} href="#action3" value={g.strArea}>{g.strArea}</NavDropdown.Item>)}
                     <NavDropdown.Item as={Link} to={`/countfoods/${g.strArea}`} href="#action3" value={g.strArea}>{console.log(g.idArea)}{g.strArea}</NavDropdown.Item>)}
                 </NavDropdown>
-                <Nav.Link as={Link} to="/Basket" >Basket
+                <Nav.Link as={Link} to="/Basket">Basket
                 </Nav.Link>
                
               </Nav>

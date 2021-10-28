@@ -27,7 +27,7 @@ const Footer = () => {
 				<div className="Newsletter col-6 pt-5">
 					<h2 className="h4" style={{color: "grey"}}>Newsletter</h2>
 					<div className="pt-2">
-						<p style={{fontSize: "12px"}} className="text-secondary">©2015 Besoft__foods.kg.</p>
+						<p style={{fontSize: "12px"}} className="text-secondary">©2021 Besoft__foods.kg.</p>
 					</div>
 				</div>
 			</div>

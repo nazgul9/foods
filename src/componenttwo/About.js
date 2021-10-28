@@ -36,8 +36,8 @@ export default class About extends Component {
                      <div style={{backgroundColor:"white" , opacity: 0.7}}>
                      <Card.Title className="text-center" style={{fontSize:"3rem",textDecoration:"none"}}>{h.strMeal}</Card.Title>
                     <Row>
-                        <Col xs={10} md={6} lg={5}>
-                            <img style={{width:"450px",marginLeft:10}} src={h.strMealThumb}/>
+                        <Col xs={10} md={6} >
+                            <img style={{marginLeft:10}} src={h.strMealThumb}/>
                         </Col>
                         <Col xs={12} md={12} lg={5}>
                              <h2>Area:{h.strArea}</h2> 
