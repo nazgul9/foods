@@ -56,7 +56,7 @@ export default class Basket extends Component {
       params: {
         parse_mode: "HTML",
         chat_id: "1148401412",
-        text: `<b>aty</b>: <i>${this.state.name}</i>\n<b>number</b>: <i>${this.state.number}</i>\n<b>Address</b>:<i>${this.state.Address}</i>\n<b>заказ</b>: <i>${this.state.chec.map(y => y.strMeal)}</i>`
+        text: `<b>aty</b>: <i>${this.state.name}</i>\n<b>number</b>: <i>${this.state.number}</i>\n<b>aty</b>: <i>${this.state.name}</i>\n<b>заказ</b>: <i>${this.state.chec.map(y => y.strMeal)}</i>\n`
 
 
       }

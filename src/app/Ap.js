@@ -13,7 +13,10 @@ import axios from 'axios';
 
 export default class Ap extends Component {
   state = {
-    categor: []
+    categor: [],
+    search:"",
+    item: JSON.parse(localStorage.getItem('key')) || [],
+
   }
   componentDidMount(){
     const t = axios.get(`https://www.themealdb.com/api/json/v1/1/list.php?a=list`);
@@ -42,11 +45,17 @@ export default class Ap extends Component {
                 </div>
                 <NavDropdown title="Countries" id="navbarScrollingDropdown">
                   {r.map((g) =>
-                    // <NavDropdown.Item as={Link} to={`/countfoods/${g.strArea}`} href="#action3" value={g.strArea}>{g.strArea}</NavDropdown.Item>)}
                     <NavDropdown.Item as={Link} to={`/countfoods/${g.strArea}`} href="#action3" value={g.strArea}>{console.log(g.idArea)}{g.strArea}</NavDropdown.Item>)}
-                </NavDropdown>
+                </NavDropdown >
+                <div className="position-relative">
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">                    
+                                   ({this.state.item.length})
+                                        <span class="visually-hidden">unread messages</span>
+                                    </span>
                 <Nav.Link as={Link} to="/Basket">Basket
                 </Nav.Link>
+                </div>
+               
                
               </Nav>
               <label>
